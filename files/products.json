@@ -1,0 +1,48 @@
+[
+    {
+      "id": 1,
+      "title": "Reloj de pared",
+      "description": "reloj vintage madera",
+      "price": 150,
+      "thumbnail": "photo1.png",
+      "code": "001",
+      "stock": "100"
+    },
+   {
+      "id": 2,
+      "title": "Lámpara",
+      "description": "lámpara de mesa Beige 35x20cm",
+      "price": 180,
+      "thumbnail": "photo2.png",
+      "code": "002",
+      "stock": "100"
+    },
+   {
+      "id": 3,
+      "title": "Florero",
+      "description": "florero de Vidrio de Cuadritos",
+      "price": 150,
+      "thumbnail": "photo3.png",
+      "code": "003",
+      "stock": "100"
+    }, 
+   {
+    "id": 4,
+    "title": "Florero2",
+    "description": "florero de madera",
+    "price": 150,
+    "thumbnail": "photo4.png",
+    "code": "004",
+    "stock": "100"
+  },
+ {
+    "id": 5,
+    "title": "Florero3",
+    "description": "florero de metal",
+    "price": 150,
+    "thumbnail": "photo5.png",
+    "code": "005",
+    "stock": "100"
+  }
+]
+  
