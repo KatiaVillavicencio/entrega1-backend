@@ -23,6 +23,8 @@ cartRouter.post("/carts/", async (req, res) => {
      res.json({ status: "success", newcart });
   });
 
+//http://localhost:8080/api/carts/idCarts/products/4
+
 cartRouter.post("/carts/:cid/products/:pid", async (req, res) => {
     try {
       const cid = parseInt(req.params.cid);

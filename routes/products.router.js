@@ -5,11 +5,15 @@ import { __dirname } from "../utils.js"
 const manager= new ProductManager(__dirname+'/files/products.json')
 const productRouter = Router()
 
+
+//http://localhost:8080/api/products/
+
 productRouter.get("/products",async(req,res)=>{
     const products= await manager.getProducts(req.query)
     res.json({products})
 })
 
+//http://localhost:8080/api/products/idproducto
 
 productRouter.get("/products/:pid", async (req, res) => {
     const productfind = await manager.getProductbyId(req.params);
