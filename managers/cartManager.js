@@ -2,12 +2,12 @@ import fs from "fs"
 
 export default class CartManager{
     constructor(){
-      this.path ="../files/carrito.json",
+      this.path ="./files/carts.json",
       this.carts=[]
     }
 
 
-    //READ
+    //Read//
     getCarts=async()=>{
     if(fs.existsSync(this.path)){
       const cartList= await fs.promises.readFile(this.path,"utf-8")
@@ -26,20 +26,20 @@ export default class CartManager{
       const {cid}=id
       if (fs.existsSync(this.path)) {
         const allcarts=await this.getCarts()
-        const found=allcarts.find(element=>element.id===parseInt(cid))
-        if (found) {
-          return found;
+        const carts=allcarts.find(element=>element.id===parseInt(cid))
+        if (carts) {
+          return carts;
         } else {
-         return ("cart no existe");
+         return ("cart not found");
         }
       } else {
-        return("cart file json  not found");
+        return("cart json no encontrado");
       }
       } catch (error) {
       return(error);
       }
     }
-    //GENERATE ID 
+    //Generate Id
     generatecartId=async()=>{
       try {
         if (fs.existsSync(this.path)) {
@@ -64,7 +64,7 @@ export default class CartManager{
         products: []
       };
       listaCarts.push(cartNew);
-      await fs.promises.writeFile(this.path, JSON.stringify(listaCarts, null, 2));
+      await fs.promises.writeFile(this.path, JSON.stringify(listaCarts));
     }
     
 
@@ -77,7 +77,7 @@ export default class CartManager{
           // Si el producto ya existe en el carrito, incrementar la cantidad
           cart.products[productIndex].quantity++;
         } else {
-          // Si el producto no existe en el carrito, agregarlo como un nuevo objeto
+          // Si el producto no existe en el carrito, agregarlo como un nuevo
           cart.products.push({
             pid,
             quantity: 1

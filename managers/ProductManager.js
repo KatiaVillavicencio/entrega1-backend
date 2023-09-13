@@ -1,8 +1,9 @@
 import fs from "fs"
 
 export default class ProductManager {
-  constructor(path) {
-    (this.path = path), (this.products = []);
+  constructor() {
+    this.path ="./files/products.json", 
+    this.products = [];
   }
 
     //Agregar// create
@@ -124,7 +125,7 @@ export default class ProductManager {
               throw new Error("Not found");
             }
           } else {
-            throw new Error("Product not found");
+            throw new Error("Producto no encontrado");
           }
         } catch (error) {
           throw new Error(error);
@@ -133,7 +134,7 @@ export default class ProductManager {
 }
   
 
-/*
+
 
 async function productsAsync(){
 const productos =new ProductManager();
@@ -159,10 +160,11 @@ await productos.getProductbyId(3)
 
 //llamamos a todos los productos //
 console.log (await productos.getProducts())
+*/
 
 
 }
-productsAsync()*/
+productsAsync()
 
 
 

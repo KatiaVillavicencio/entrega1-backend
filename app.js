@@ -1,8 +1,8 @@
-import express from "express"
-import productRouter from "./routes/products.router.js"
-import cartRouter from "./routes/carts.router.js"
+import express from "express";
+import productRouter from "./routes/products.router.js";
+import cartRouter from "./routes/carts.router.js";
 
-const app=express();
+const app=express(); 
 const PORT=8080;
 
 app.use(express.json())
